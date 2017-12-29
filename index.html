@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Content/css/style.css">
+</head>
+<body ng-app="app">
+    <div class="wrap" ng-controller="formController">
+        <div class="top">
+            <ul class="ul">
+                <li ng-click = 'logClick()'>登录</li>
+                <li ng-click = 'reClick()'>注册</li>
+            </ul>
+        </div>
+        <form ng-show="log" class="box1 login">
+            <ul>
+                <li>账 号</li>
+                <li>密 码</li>
+            </ul>
+            <ol>
+                <li><input type="text" placeholder="请输入登录用户名" class="loguser"></li>
+                <li><input type="password" placeholder="请输入密码" class="logpwd"></li>
+            </ol>
+            <button type="submit">登录</button>
+        </form>
+        <form ng-show="reg" class="box1 regisiter">
+            <ul>
+                <li>账 号</li>
+                <li>密 码</li>
+                <li>再次输入密码</li>
+            </ul>
+            <ol>
+                <li><input type="text" placeholder="请输入登录用户名" class="reguser"></li>
+                <li><input type="password" placeholder="请输入密码" class="regpwd"></li>
+                <li><input type="password" placeholder="请再次输入密码"  class="revpwd"></li>
+            </ol>
+            <button type="submit">注册</button>
+        </form>
+    </div>
+</body>
+<script src="script/Angular/angular.min.js"></script>
+<script src="App/app.js"></script>
+<script src="App/Controller/controller.js"></script>
+</html>
